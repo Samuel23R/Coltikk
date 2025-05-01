@@ -9,53 +9,62 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <nav id="menu" class="hidden">
+        <div class="logo">
+            <h1>Coltikk</h1>
+        </div>
+        <div class="contacto">
+            <span>Pago a Nequi y Daviplata</span>
+            <p>Contáctanos: <strong>3195546863</strong></p>
+        </div>
+        <nav>
             <ul>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#carrito">Carrito</a></li>
                 <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
             </ul>
         </nav>
-        <h1 class="title">Coltikk</h1>
     </header>
 
+    <!-- Main Section -->
     <main>
+        <!-- Productos -->
         <section id="productos">
-            <h2>AirPods 2Gen</h2>
-            <div class="producto" onclick="verDetalles()">
+            <h2>Productos Destacados</h2>
+            <div class="producto">
                 <img src="airpods.jpg" alt="AirPods 2Gen">
-                <p class="precio">Precio: 99.999 COP</p>
-                <button class="agregar-carrito" onclick="agregarAlCarrito(event)">Agregar al carrito</button>
+                <div class="detalles">
+                    <h3>AirPods 2Gen</h3>
+                    <p>Precio: 99.999 COP</p>
+                    <button onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                </div>
             </div>
         </section>
 
+        <!-- Carrito -->
         <section id="carrito">
             <h2>Carrito de Compras</h2>
-            <p>Productos seleccionados: <span id="carrito-count">0</span></p>
             <div id="carrito-detalles"></div>
             <button onclick="irAWhatsApp()">Finalizar compra</button>
         </section>
 
+        <!-- Sobre Nosotros -->
         <section id="sobre-nosotros">
             <h2>Sobre Nosotros</h2>
-            <p>Coltikk es una tienda innovadora especializada en productos de alta tecnología como los AirPods 2Gen, con opciones de pago fáciles y seguras.</p>
+            <p>Coltikk es una tienda de productos tecnológicos con opciones de pago fáciles y seguras. Ofrecemos los mejores productos como los AirPods 2Gen a precios competitivos.</p>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Coltikk</p>
-    </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <h2>AirPods 2Gen</h2>
-            <p>Conectividad inalámbrica, batería de larga duración y sonido de alta calidad. Perfecto para una experiencia de audio sin interrupciones.</p>
-            <p><strong>Precio:</strong> 99.999 COP</p>
+        <p>&copy; 2025 Coltikk. Todos los derechos reservados.</p>
+        <div class="social">
+            <!-- Enlaces a redes sociales si aplica -->
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
         </div>
-    </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
