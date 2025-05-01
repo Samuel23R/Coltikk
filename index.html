@@ -24,16 +24,17 @@
     <main>
         <section id="productos">
             <h2>AirPods 2Gen</h2>
-            <div class="producto">
+            <div class="producto" onclick="verDetalles()">
                 <img src="airpods.jpg" alt="AirPods 2Gen">
                 <p class="precio">Precio: 99.999 COP</p>
-                <button class="agregar-carrito" onclick="agregarAlCarrito()">Agregar al carrito</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito(event)">Agregar al carrito</button>
             </div>
         </section>
 
         <section id="carrito">
             <h2>Carrito de Compras</h2>
             <p>Productos seleccionados: <span id="carrito-count">0</span></p>
+            <div id="carrito-detalles"></div>
             <button onclick="irAWhatsApp()">Finalizar compra</button>
         </section>
 
@@ -46,6 +47,15 @@
     <footer>
         <p>&copy; 2025 Coltikk</p>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>AirPods 2Gen</h2>
+            <p>Conectividad inalámbrica, batería de larga duración y sonido de alta calidad. Perfecto para una experiencia de audio sin interrupciones.</p>
+            <p><strong>Precio:</strong> 99.999 COP</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
