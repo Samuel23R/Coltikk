@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coltikk - AirPods 2da Gen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Coltikk</h1>
+        <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+    </header>
+
+    <main>
+        <section class="product">
+            <img src="images/airpods.jpg" alt="AirPods 2da Generación">
+            <h2>AirPods 2da Generación</h2>
+            <p>$100.000 COP</p>
+            <button onclick="addToCart()">Agregar al carrito</button>
+        </section>
+    </main>
+
+    <aside id="cart">
+        <h3>Tu carrito</h3>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0</span> COP</p>
+        <button onclick="checkout()">Confirmar pedido</button>
+    </aside>
+
+    <footer>
+        <p>Métodos de pago: Nequi y Daviplata al 3195546863</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
