@@ -1,21 +1,18 @@
 
-let cart = [];
-
-function addToCart() {
-  cart.push('AirPods 2da Generación');
-  updateCart();
-}
-
-function updateCart() {
-  const cartDiv = document.getElementById('cart');
-  cartDiv.innerHTML = cart.map(item => `<p>${item}</p>`).join('');
-}
-
-function confirmOrder() {
-  const message = encodeURIComponent('Hola, quiero pedir: ' + cart.join(', '));
-  window.open(`https://wa.me/573195546863?text=${message}`, '_blank');
-}
-
 function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('active');
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+}
+
+let carritoCount = 0;
+
+function agregarAlCarrito() {
+    carritoCount++;
+    document.getElementById('carrito-count').innerText = carritoCount;
+}
+
+function irAWhatsApp() {
+    const numero = '3195546863';
+    const mensaje = 'Hola, estoy interesado en comprar los AirPods 2Gen.';
+    window.open(https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}, '_blank');
 }
